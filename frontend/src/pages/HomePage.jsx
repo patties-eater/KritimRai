@@ -3,7 +3,7 @@ import { usePortfolio } from '../context/PortfolioContext.jsx'
 
 function HomePage() {
   const { portfolio } = usePortfolio()
-  const { profile, collections, testimonials, contact } = portfolio
+  const { profile, collections, featuredIn, testimonials, contact } = portfolio
 
   return (
     <main>
@@ -76,6 +76,24 @@ function HomePage() {
           <Link className="text-link" to="/collections">
             See all collections
           </Link>
+        </div>
+      </section>
+
+      <section className="section-shell">
+        <div className="mb-6 flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+          <p className="eyebrow">Featured before</p>
+          <h2 className="section-title">Places where I have been featured</h2>
+        </div>
+        <div className="grid gap-[18px] md:grid-cols-2 xl:grid-cols-4">
+          {featuredIn.map((feature) => (
+            <article key={feature.name} className="info-card">
+              <p className="text-xs uppercase tracking-[0.16em] text-[var(--color-accent-deep)]">
+                {feature.type}
+              </p>
+              <h3 className="my-2 text-[1.3rem] text-[var(--color-ink)]">{feature.name}</h3>
+              <p className="text-[var(--color-muted)]">{feature.note}</p>
+            </article>
+          ))}
         </div>
       </section>
 

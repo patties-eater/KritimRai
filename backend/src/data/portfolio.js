@@ -6,8 +6,7 @@ export const portfolio = {
       'Simple, beautiful photos for weddings, portraits, family moments, and special places.',
     location: 'Based in Kathmandu and available for travel',
     yearsExperience: '5+',
-    heroImage:
-      'https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=1200&q=80',
+    heroImage: '/profile-photo.png',
     stats: [
       { label: 'Happy clients', value: '120+' },
       { label: 'Photo shoots', value: '240+' },
@@ -34,6 +33,28 @@ export const portfolio = {
       name: 'Event Collection',
       count: '40 photos',
       description: 'Bright and clear photos from parties, launches, celebrations, and live events.',
+    },
+  ],
+  featuredIn: [
+    {
+      name: 'Add magazine name',
+      type: 'Publication',
+      note: 'Replace this with a real magazine, newspaper, or blog name.',
+    },
+    {
+      name: 'Add wedding page',
+      type: 'Wedding Feature',
+      note: 'Use this for wedding blogs, event pages, or feature stories.',
+    },
+    {
+      name: 'Add brand or company',
+      type: 'Brand Work',
+      note: 'Use this for hotels, restaurants, studios, or client brands.',
+    },
+    {
+      name: 'Add media page',
+      type: 'Social or Media',
+      note: 'Use this for Facebook pages, Instagram features, or online media.',
     },
   ],
   services: [
@@ -126,8 +147,9 @@ export const portfolio = {
   contact: {
     email: 'hello@elaravossstudio.com',
     instagram: '@elaravossstudio',
-    phone: '+977 9800000000',
-    whatsapp: '+9779800000000',
+    facebook: 'https://www.facebook.com/kritim224',
+    phone: '+977 9765259401',
+    whatsapp: '+977 9765259401',
     location: 'Kathmandu, Nepal',
   },
 }

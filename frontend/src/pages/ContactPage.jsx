@@ -15,7 +15,15 @@ function ContactPage() {
       </section>
 
       <section className="section-shell">
-        <div className="grid gap-[18px] lg:grid-cols-3">
+        <div className="grid gap-[18px] lg:grid-cols-4">
+          <article className="info-card overflow-hidden p-3 lg:col-span-1">
+            <img
+              className="h-full min-h-[280px] w-full rounded-[22px] object-cover"
+              src={contact.heroImage ?? portfolio.profile.heroImage}
+              alt={`${portfolio.profile.name} profile`}
+            />
+          </article>
+
           <article className="info-card grid content-start gap-3.5">
             <p className="text-xs uppercase tracking-[0.16em] text-[var(--color-accent-deep)]">
               Phone
@@ -63,6 +71,14 @@ function ContactPage() {
               rel="noreferrer"
             >
               {contact.instagram}
+            </a>
+            <a
+              className="text-link"
+              href={contact.facebook}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Facebook profile
             </a>
           </article>
         </div>

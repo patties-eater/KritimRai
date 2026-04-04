@@ -10,8 +10,7 @@ const fallbackData = {
       'Simple, beautiful photos for weddings, portraits, family moments, and special places.',
     location: 'Based in Kathmandu and available for travel',
     yearsExperience: '5+',
-    heroImage:
-      'https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=1200&q=80',
+    heroImage: '/profile-photo.png',
     stats: [
       { label: 'Happy clients', value: '120+' },
       { label: 'Photo shoots', value: '240+' },
@@ -19,14 +18,16 @@ const fallbackData = {
     ],
   },
   collections: [],
+  featuredIn: [],
   services: [],
   gallery: [],
   testimonials: [],
   contact: {
     email: 'hello@elaravossstudio.com',
     instagram: '@elaravossstudio',
-    phone: '+977 9800000000',
-    whatsapp: '+9779800000000',
+    facebook: 'https://www.facebook.com/kritim224',
+    phone: '+977 9765259401',
+    whatsapp: '+977 9765259401',
     location: 'Kathmandu, Nepal',
   },
 }
