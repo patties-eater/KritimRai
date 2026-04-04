@@ -39,44 +39,62 @@ export const portfolio = {
     {
       name: 'Wedding Basic Package',
       price: 'NPR 25,000',
+      featured: false,
+      duration: '4 hours',
       description:
         'Good for small weddings and simple event coverage with the main moments captured well.',
       deliverables: '4 hours coverage, edited photos, and online gallery delivery.',
+      features: ['4 hours of coverage', '100+ edited photos', 'Online gallery', 'Phone support before event'],
     },
     {
       name: 'Wedding Full Day Package',
       price: 'NPR 55,000',
+      featured: true,
+      duration: 'Full day',
       description:
         'Best for full wedding stories from preparation to ceremony and celebration.',
       deliverables: 'Full day coverage, highlight photos, edited gallery, and event planning support.',
+      features: ['Full day coverage', '300+ edited photos', 'Highlight preview', 'Planning support', 'Online gallery'],
     },
     {
       name: 'Portrait Package',
       price: 'NPR 8,000',
+      featured: false,
+      duration: '1 to 2 hours',
       description:
         'A simple portrait package for one person, couples, graduation, or family photos.',
       deliverables: '1 to 2 hour shoot, pose guidance, edited images, and digital delivery.',
+      features: ['1 to 2 hour session', 'Pose guidance', '25+ edited photos', 'Digital delivery'],
     },
     {
       name: 'Pre Wedding Package',
       price: 'NPR 18,000',
+      featured: false,
+      duration: 'Half day',
       description:
         'A relaxed outdoor or city shoot for couples before the wedding day.',
       deliverables: 'Location planning, outfit support, edited photos, and social media ready images.',
+      features: ['Location planning', 'Outfit suggestions', 'Edited photos', 'Social media ready images'],
     },
     {
       name: 'Event Coverage Package',
       price: 'NPR 15,000',
+      featured: false,
+      duration: 'Up to 4 hours',
       description:
         'Photography for birthdays, engagements, parties, launches, and special programs.',
       deliverables: 'Event coverage, edited photos, and fast online delivery.',
+      features: ['Event coverage', 'Fast photo delivery', 'Edited images', 'Suitable for parties and programs'],
     },
     {
       name: 'Brand and Product Package',
       price: 'Starting from NPR 12,000',
+      featured: false,
+      duration: 'Custom timing',
       description:
-        'Photo service for cafés, small businesses, products, menus, and social media content.',
+        'Photo service for cafes, small businesses, products, menus, and social media content.',
       deliverables: 'Shot planning, product or space photos, edited files, and business use images.',
+      features: ['Shot planning', 'Product and space photos', 'Edited files', 'Business use images'],
     },
   ],
   gallery: [
@@ -130,5 +148,12 @@ export const portfolio = {
     phone: '+977 9765259401',
     whatsapp: '+977 9765259401',
     location: 'Kathmandu, Nepal',
+    vcardUrl: '/kritim-rai-contact.vcf',
+  },
+  availability: {
+    title: 'Available across Nepal for weddings, portraits, events, and travel shoots.',
+    details:
+      'Open for bookings in Kathmandu, outside valley shoots, destination weddings, and short creative projects.',
+    slots: ['Weddings', 'Portraits', 'Events', 'Travel Shoots'],
   },
 }

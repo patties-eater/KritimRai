@@ -48,7 +48,7 @@ const staticReviews = [
 
 function HomePage() {
   const { portfolio } = usePortfolio()
-  const { profile, collections, contact } = portfolio
+  const { profile, collections, contact, availability } = portfolio
 
   return (
     <main>
@@ -143,10 +143,28 @@ function HomePage() {
                 target="_blank"
                 rel="noreferrer"
               >
-                View
+                View feature
               </a>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="section-shell">
+        <div className="rounded-[28px] border border-[rgba(68,42,24,0.09)] bg-[rgba(255,255,255,0.64)] p-7">
+          <p className="eyebrow">Availability</p>
+          <h2 className="section-title">{availability.title}</h2>
+          <p className="mt-4 max-w-3xl text-[var(--color-muted)]">{availability.details}</p>
+          <div className="mt-6 flex flex-wrap gap-3">
+            {availability.slots.map((slot) => (
+              <span
+                key={slot}
+                className="rounded-full border border-[rgba(61,41,28,0.16)] bg-[rgba(255,255,255,0.7)] px-4 py-2 text-sm text-[var(--color-ink)]"
+              >
+                {slot}
+              </span>
+            ))}
+          </div>
         </div>
       </section>
 

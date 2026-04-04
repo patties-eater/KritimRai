@@ -11,7 +11,7 @@ const navLinkClass = ({ isActive }) =>
   ].join(' ')
 
 function Layout() {
-  const { portfolio, status } = usePortfolio()
+  const { portfolio } = usePortfolio()
   const { profile } = portfolio
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const location = useLocation()
@@ -93,12 +93,6 @@ function Layout() {
               Contact
             </NavLink>
           </nav>
-        </div>
-
-        <div className="mt-[18px] text-[0.92rem] text-[var(--color-accent-deep)]">
-          {status === 'loading' && <span>Loading portfolio details.</span>}
-          {status === 'fallback' && <span>Showing preview content.</span>}
-          {status === 'ready' && <span>Live portfolio content loaded.</span>}
         </div>
       </header>
 
