@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom'
 import AppLoader from './components/AppLoader.jsx'
 import Layout from './components/Layout.jsx'
+import ScrollToTop from './components/ScrollToTop.jsx'
 import { PortfolioProvider, usePortfolio } from './context/PortfolioContext.jsx'
 import AboutPage from './pages/AboutPage.jsx'
 import CollectionsPage from './pages/CollectionsPage.jsx'
@@ -17,16 +18,19 @@ function AppRoutes() {
   }
 
   return (
-    <Routes>
-      <Route element={<Layout />}>
-        <Route index element={<HomePage />} />
-        <Route path="/collections" element={<CollectionsPage />} />
-        <Route path="/portfolio" element={<PortfolioPage />} />
-        <Route path="/services" element={<ServicesPage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-      </Route>
-    </Routes>
+    <>
+      <ScrollToTop />
+      <Routes>
+        <Route element={<Layout />}>
+          <Route index element={<HomePage />} />
+          <Route path="/collections" element={<CollectionsPage />} />
+          <Route path="/portfolio" element={<PortfolioPage />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Route>
+      </Routes>
+    </>
   )
 }
 
