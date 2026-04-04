@@ -1,8 +1,35 @@
 import { usePortfolio } from '../context/PortfolioContext.jsx'
 
+const featuredBefore = [
+  {
+    name: 'Routine of Nepal Banda',
+    type: 'Facebook Feature',
+    note: 'Featured on the Routine of Nepal Banda Facebook page.',
+    href: 'https://www.facebook.com/100064557167145/posts/983393973822499/?mibextid=rS40aB7S9Ucbxw6v',
+  },
+  {
+    name: 'BCA Association - MMC',
+    type: 'Facebook Feature',
+    note: 'Featured on the BCA Association - MMC Facebook page.',
+    href: 'https://www.facebook.com/share/p/1HGn5nrcHB/',
+  },
+  {
+    name: 'Brand Collaboration',
+    type: 'Brand Work',
+    note: 'Use this for a hotel, cafe, studio, product, or company project.',
+    href: 'https://example.com/brand-work',
+  },
+  {
+    name: 'Media Page Mention',
+    type: 'Social or Media',
+    note: 'Use this for Facebook pages, Instagram posts, or digital media mentions.',
+    href: 'https://example.com/media-mention',
+  },
+]
+
 function AboutPage() {
   const { portfolio } = usePortfolio()
-  const { profile, featuredIn } = portfolio
+  const { profile } = portfolio
 
   return (
     <main>
@@ -39,13 +66,21 @@ function AboutPage() {
           <h2 className="section-title">Past features and mentions</h2>
         </div>
         <div className="grid gap-[18px] md:grid-cols-2 xl:grid-cols-4">
-          {featuredIn.map((feature) => (
+          {featuredBefore.map((feature) => (
             <article key={feature.name} className="info-card">
               <p className="text-xs uppercase tracking-[0.16em] text-[var(--color-accent-deep)]">
                 {feature.type}
               </p>
               <h3 className="my-2 text-[1.3rem] text-[var(--color-ink)]">{feature.name}</h3>
               <p className="text-[var(--color-muted)]">{feature.note}</p>
+              <a
+                className="mt-4 inline-flex w-fit items-center rounded-full border border-[rgba(61,41,28,0.16)] px-4 py-2 text-sm text-[var(--color-ink)] transition duration-200 hover:-translate-y-0.5"
+                href={feature.href}
+                target="_blank"
+                rel="noreferrer"
+              >
+                View
+              </a>
             </article>
           ))}
         </div>

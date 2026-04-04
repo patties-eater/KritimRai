@@ -18,10 +18,8 @@ const fallbackData = {
     ],
   },
   collections: [],
-  featuredIn: [],
   services: [],
   gallery: [],
-  testimonials: [],
   contact: {
     email: 'hello@elaravossstudio.com',
     instagram: '@elaravossstudio',

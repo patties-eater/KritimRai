@@ -35,49 +35,48 @@ export const portfolio = {
       description: 'Bright and clear photos from parties, launches, celebrations, and live events.',
     },
   ],
-  featuredIn: [
-    {
-      name: 'Add magazine name',
-      type: 'Publication',
-      note: 'Replace this with a real magazine, newspaper, or blog name.',
-    },
-    {
-      name: 'Add wedding page',
-      type: 'Wedding Feature',
-      note: 'Use this for wedding blogs, event pages, or feature stories.',
-    },
-    {
-      name: 'Add brand or company',
-      type: 'Brand Work',
-      note: 'Use this for hotels, restaurants, studios, or client brands.',
-    },
-    {
-      name: 'Add media page',
-      type: 'Social or Media',
-      note: 'Use this for Facebook pages, Instagram features, or online media.',
-    },
-  ],
   services: [
     {
-      name: 'Wedding photography',
-      price: 'From $1,800',
+      name: 'Wedding Basic Package',
+      price: 'NPR 25,000',
       description:
-        'Full-day photo coverage for couples who want every important moment captured.',
-      deliverables: 'Planning help, preview photos, and a full gallery.',
+        'Good for small weddings and simple event coverage with the main moments captured well.',
+      deliverables: '4 hours coverage, edited photos, and online gallery delivery.',
     },
     {
-      name: 'Portrait session',
-      price: 'From $350',
+      name: 'Wedding Full Day Package',
+      price: 'NPR 55,000',
       description:
-        'Easy and relaxed portrait sessions for one person, couples, families, or brands.',
-      deliverables: 'Location help, photo guidance, and an online gallery.',
+        'Best for full wedding stories from preparation to ceremony and celebration.',
+      deliverables: 'Full day coverage, highlight photos, edited gallery, and event planning support.',
     },
     {
-      name: 'Event and brand shoot',
-      price: 'Custom quote',
+      name: 'Portrait Package',
+      price: 'NPR 8,000',
       description:
-        'Photo coverage for events, hotels, restaurants, products, and social media content.',
-      deliverables: 'Shot planning, edited files, and ready-to-use images.',
+        'A simple portrait package for one person, couples, graduation, or family photos.',
+      deliverables: '1 to 2 hour shoot, pose guidance, edited images, and digital delivery.',
+    },
+    {
+      name: 'Pre Wedding Package',
+      price: 'NPR 18,000',
+      description:
+        'A relaxed outdoor or city shoot for couples before the wedding day.',
+      deliverables: 'Location planning, outfit support, edited photos, and social media ready images.',
+    },
+    {
+      name: 'Event Coverage Package',
+      price: 'NPR 15,000',
+      description:
+        'Photography for birthdays, engagements, parties, launches, and special programs.',
+      deliverables: 'Event coverage, edited photos, and fast online delivery.',
+    },
+    {
+      name: 'Brand and Product Package',
+      price: 'Starting from NPR 12,000',
+      description:
+        'Photo service for cafés, small businesses, products, menus, and social media content.',
+      deliverables: 'Shot planning, product or space photos, edited files, and business use images.',
     },
   ],
   gallery: [
@@ -122,26 +121,6 @@ export const portfolio = {
       description: 'A creative portrait collection with soft shadow and movement.',
       image:
         'https://images.unsplash.com/photo-1521119989659-a83eee488004?auto=format&fit=crop&w=900&q=80',
-    },
-  ],
-  testimonials: [
-    {
-      name: 'Nina and Aarav',
-      context: 'Wedding clients',
-      quote:
-        'The photos felt natural and full of real emotion. We love every single one.',
-    },
-    {
-      name: 'Hotel Sora',
-      context: 'Brand client',
-      quote:
-        'The work was smooth, clear, and professional. The final photos were perfect for our brand.',
-    },
-    {
-      name: 'Mira Shrestha',
-      context: 'Portrait client',
-      quote:
-        'I felt comfortable during the shoot, and the photos looked simple, clean, and beautiful.',
     },
   ],
   contact: {
