@@ -48,7 +48,7 @@ const staticReviews = [
 
 function HomePage() {
   const { portfolio } = usePortfolio()
-  const { profile, collections, contact, availability } = portfolio
+  const { profile, contact, availability } = portfolio
 
   return (
     <main>
@@ -97,29 +97,6 @@ function HomePage() {
               <span>{item.label}</span>
             </article>
           ))}
-        </div>
-      </section>
-
-      <section className="section-shell">
-        <div className="mb-6 flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
-          <p className="eyebrow">Quick look</p>
-          <h2 className="section-title">Photo collections and client reviews</h2>
-        </div>
-        <div className="grid gap-[18px] md:grid-cols-2 xl:grid-cols-4">
-          {collections.slice(0, 4).map((collection) => (
-            <article key={collection.name} className="info-card">
-              <p className="text-xs uppercase tracking-[0.16em] text-[var(--color-accent-deep)]">
-                {collection.count}
-              </p>
-              <h3 className="my-2 text-[1.3rem] text-[var(--color-ink)]">{collection.name}</h3>
-              <p className="text-[var(--color-muted)]">{collection.description}</p>
-            </article>
-          ))}
-        </div>
-        <div className="mt-[18px]">
-          <Link className="text-link" to="/collections">
-            See all collections
-          </Link>
         </div>
       </section>
 

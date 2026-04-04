@@ -2,6 +2,21 @@ import { useEffect, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { usePortfolio } from '../context/PortfolioContext.jsx'
 
+const bsMonths = [
+  'Baisakh',
+  'Jestha',
+  'Ashadh',
+  'Shrawan',
+  'Bhadra',
+  'Ashwin',
+  'Kartik',
+  'Mangsir',
+  'Poush',
+  'Magh',
+  'Falgun',
+  'Chaitra',
+]
+
 function ContactPage() {
   const { portfolio } = usePortfolio()
   const { contact, services } = portfolio
@@ -16,7 +31,9 @@ function ContactPage() {
     name: '',
     phone: '',
     eventType: defaultEventType,
-    date: '',
+    bsYear: '2083',
+    bsMonth: 'Baisakh',
+    bsDay: '1',
     message: selectedService ? `Hi, I want to ask about the ${selectedService}.` : '',
   })
 
@@ -33,13 +50,21 @@ function ContactPage() {
     setFormData((current) => ({ ...current, [name]: value }))
   }
 
+  function getFormattedBsDate() {
+    if (!formData.bsYear || !formData.bsMonth || !formData.bsDay) {
+      return 'Not set'
+    }
+
+    return `${formData.bsYear} ${formData.bsMonth} ${formData.bsDay} BS`
+  }
+
   function buildMessage() {
     return [
       'Hello Kritim Rai,',
       `My name is ${formData.name || '...'}.`,
       `Phone: ${formData.phone || '...'}`,
       `Package: ${formData.eventType || '...'}`,
-      `Preferred date: ${formData.date || 'Not set'}`,
+      `Preferred date: ${getFormattedBsDate()}`,
       `Message: ${formData.message || '...'}`,
     ].join('\n')
   }
@@ -139,8 +164,8 @@ function ContactPage() {
           <p className="eyebrow">Booking form</p>
           <h2 className="section-title">Send your booking details</h2>
           <p className="mt-4 max-w-2xl text-[var(--color-muted)]">
-            Share your event type, date, and message. Then send it directly to WhatsApp or SMS with
-            one tap.
+            Share your event type, BS date, and message. Then send it directly to WhatsApp or SMS
+            with one tap.
           </p>
           {selectedService ? (
             <div className="mt-5 inline-flex items-center rounded-full bg-[rgba(199,138,82,0.14)] px-4 py-2 text-sm text-[var(--color-accent-deep)]">
@@ -182,16 +207,42 @@ function ContactPage() {
                 ))}
               </select>
             </label>
-            <label className="grid gap-2">
-              <span className="text-sm text-[var(--color-ink)]">Preferred date</span>
-              <input
-                className="rounded-2xl border border-[rgba(61,41,28,0.16)] bg-white px-4 py-3 outline-none"
-                type="date"
-                name="date"
-                value={formData.date}
-                onChange={updateField}
-              />
-            </label>
+            <div className="grid gap-2 lg:col-span-2">
+              <span className="text-sm text-[var(--color-ink)]">Preferred date in BS</span>
+              <div className="grid gap-3 sm:grid-cols-3">
+                <input
+                  className="rounded-2xl border border-[rgba(61,41,28,0.16)] bg-white px-4 py-3 outline-none"
+                  name="bsYear"
+                  value={formData.bsYear}
+                  onChange={updateField}
+                  placeholder="2083"
+                  inputMode="numeric"
+                />
+                <select
+                  className="rounded-2xl border border-[rgba(61,41,28,0.16)] bg-white px-4 py-3 outline-none"
+                  name="bsMonth"
+                  value={formData.bsMonth}
+                  onChange={updateField}
+                >
+                  {bsMonths.map((month) => (
+                    <option key={month}>{month}</option>
+                  ))}
+                </select>
+                <select
+                  className="rounded-2xl border border-[rgba(61,41,28,0.16)] bg-white px-4 py-3 outline-none"
+                  name="bsDay"
+                  value={formData.bsDay}
+                  onChange={updateField}
+                >
+                  {Array.from({ length: 32 }, (_, index) => String(index + 1)).map((day) => (
+                    <option key={day}>{day}</option>
+                  ))}
+                </select>
+              </div>
+              <p className="text-sm text-[var(--color-accent-deep)]">
+                Selected date: {getFormattedBsDate()}
+              </p>
+            </div>
             <label className="grid gap-2 lg:col-span-2">
               <span className="text-sm text-[var(--color-ink)]">Message</span>
               <textarea
