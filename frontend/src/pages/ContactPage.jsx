@@ -92,7 +92,7 @@ function ContactPage() {
       </section>
 
       <section className="section-shell">
-        <div className="grid gap-[18px] lg:grid-cols-4">
+        <div className="grid gap-[18px] lg:grid-cols-3">
           <article className="info-card overflow-hidden p-3 lg:col-span-1">
             <img
               className="h-full min-h-[280px] w-full rounded-[22px] object-cover"
@@ -112,9 +112,6 @@ function ContactPage() {
             <a className="button button-primary" href={`tel:${contact.phone.replace(/\s+/g, '')}`}>
               {contact.phone}
             </a>
-            <a className="button button-secondary" href={contact.vcardUrl} download>
-              Save Contact
-            </a>
           </article>
 
           <article className="info-card grid content-start gap-3.5">
@@ -122,38 +119,13 @@ function ContactPage() {
               WhatsApp
             </p>
             <h3 className="text-[1.3rem] text-[var(--color-ink)]">Send a message</h3>
-            <p className="text-[var(--color-muted)]">
-              Easy way to ask about price, dates, and photo packages.
-            </p>
             <a
               className="button button-secondary"
               href={`https://wa.me/${contact.whatsapp.replace(/\D/g, '')}`}
               target="_blank"
               rel="noreferrer"
             >
-              Chat on WhatsApp
-            </a>
-          </article>
-
-          <article className="info-card grid content-start gap-3.5">
-            <p className="text-xs uppercase tracking-[0.16em] text-[var(--color-accent-deep)]">
-              Other details
-            </p>
-            <h3 className="text-[1.3rem] text-[var(--color-ink)]">More contact options</h3>
-            <p className="text-[var(--color-muted)]">{contact.location}</p>
-            <a className="text-link" href={`mailto:${contact.email}`}>
-              {contact.email}
-            </a>
-            <a
-              className="text-link"
-              href={`https://instagram.com/${contact.instagram.replace('@', '')}`}
-              target="_blank"
-              rel="noreferrer"
-            >
-              {contact.instagram}
-            </a>
-            <a className="text-link" href={contact.facebook} target="_blank" rel="noreferrer">
-              Facebook profile
+              Open WhatsApp
             </a>
           </article>
         </div>
@@ -163,10 +135,6 @@ function ContactPage() {
         <div className="rounded-[28px] border border-[rgba(68,42,24,0.09)] bg-[rgba(255,255,255,0.64)] p-7">
           <p className="eyebrow">Booking form</p>
           <h2 className="section-title">Send your booking details</h2>
-          <p className="mt-4 max-w-2xl text-[var(--color-muted)]">
-            Share your event type, BS date, and message. Then send it directly to WhatsApp or SMS
-            with one tap.
-          </p>
           {selectedService ? (
             <div className="mt-5 inline-flex items-center rounded-full bg-[rgba(199,138,82,0.14)] px-4 py-2 text-sm text-[var(--color-accent-deep)]">
               Selected package: {selectedService}
