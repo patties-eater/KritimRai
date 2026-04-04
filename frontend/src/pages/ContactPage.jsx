@@ -29,7 +29,6 @@ function ContactPage() {
       : serviceOptions[0] || 'Wedding'
   const [formData, setFormData] = useState({
     name: '',
-    phone: '',
     eventType: defaultEventType,
     bsYear: '2083',
     bsMonth: 'Baisakh',
@@ -62,7 +61,6 @@ function ContactPage() {
     return [
       'Hello Kritim Rai,',
       `My name is ${formData.name || '...'}.`,
-      `Phone: ${formData.phone || '...'}`,
       `Package: ${formData.eventType || '...'}`,
       `Preferred date: ${getFormattedBsDate()}`,
       `Message: ${formData.message || '...'}`,
@@ -79,7 +77,7 @@ function ContactPage() {
     window.location.href = `sms:${contact.phone.replace(/\s+/g, '')}?body=${message}`
   }
 
-  const canSend = formData.name && formData.phone && formData.eventType && formData.message
+  const canSend = formData.name && formData.eventType && formData.message
 
   return (
     <main>
@@ -153,16 +151,6 @@ function ContactPage() {
               />
             </label>
             <label className="grid gap-2">
-              <span className="text-sm text-[var(--color-ink)]">Phone</span>
-              <input
-                className="rounded-2xl border border-[rgba(61,41,28,0.16)] bg-white px-4 py-3 outline-none"
-                name="phone"
-                value={formData.phone}
-                onChange={updateField}
-                required
-              />
-            </label>
-            <label className="grid gap-2">
               <span className="text-sm text-[var(--color-ink)]">Event type</span>
               <select
                 className="rounded-2xl border border-[rgba(61,41,28,0.16)] bg-white px-4 py-3 outline-none"
@@ -196,16 +184,20 @@ function ContactPage() {
                     <option key={month}>{month}</option>
                   ))}
                 </select>
-                <select
+                <input
                   className="rounded-2xl border border-[rgba(61,41,28,0.16)] bg-white px-4 py-3 outline-none"
                   name="bsDay"
                   value={formData.bsDay}
                   onChange={updateField}
-                >
+                  placeholder="Day"
+                  inputMode="numeric"
+                  list="bs-day-options"
+                />
+                <datalist id="bs-day-options">
                   {Array.from({ length: 32 }, (_, index) => String(index + 1)).map((day) => (
-                    <option key={day}>{day}</option>
+                    <option key={day} value={day} />
                   ))}
-                </select>
+                </datalist>
               </div>
               <p className="text-sm text-[var(--color-accent-deep)]">
                 Selected date: {getFormattedBsDate()}
@@ -241,7 +233,7 @@ function ContactPage() {
                 </button>
               </div>
               <p className="text-sm text-[var(--color-accent-deep)]">
-                Fill name, phone, package, and message first. Then choose WhatsApp or SMS.
+                Fill name, package, and message first. Then choose WhatsApp or SMS.
               </p>
             </div>
           </div>
