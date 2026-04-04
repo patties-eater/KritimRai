@@ -55,7 +55,6 @@ function HomePage() {
       <section className="page-hero-shell">
         <div className="grid items-center gap-8 lg:grid-cols-[1.05fr_0.95fr]">
           <div>
-            <p className="eyebrow">Photographer Portfolio</p>
             <h1 className="m-0 max-w-[9ch] font-display text-[clamp(2.8rem,13vw,4rem)] leading-[0.95] font-semibold text-[var(--color-ink)] sm:text-[clamp(3.8rem,7vw,6.8rem)]">
               {profile.title}
             </h1>
