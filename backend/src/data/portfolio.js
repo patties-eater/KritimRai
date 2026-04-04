@@ -15,24 +15,24 @@ export const portfolio = {
   },
   collections: [
     {
-      name: 'Wedding Collection',
-      count: '48 photos',
-      description: 'Soft, natural photos from the full wedding day, from getting ready to the final dance.',
+      name: 'Collection One',
+      count: 'Coming soon',
+      description: 'Placeholder collection for future wedding, portrait, or event photos.',
     },
     {
-      name: 'Portrait Collection',
-      count: '36 photos',
-      description: 'Clean and relaxed portraits for personal, family, or creative sessions.',
+      name: 'Collection Two',
+      count: 'Coming soon',
+      description: 'Placeholder collection for future portrait or personal photo work.',
     },
     {
-      name: 'Travel Collection',
-      count: '52 photos',
-      description: 'Photos of places, streets, mountains, and everyday life during travel work.',
+      name: 'Collection Three',
+      count: 'Coming soon',
+      description: 'Placeholder collection for future travel, outdoor, or location shoots.',
     },
     {
-      name: 'Event Collection',
-      count: '40 photos',
-      description: 'Bright and clear photos from parties, launches, celebrations, and live events.',
+      name: 'Collection Four',
+      count: 'Coming soon',
+      description: 'Placeholder collection for future event coverage and featured albums.',
     },
   ],
   services: [
