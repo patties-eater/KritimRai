@@ -1,17 +1,80 @@
-# Photographer Portfolio
+# Kritim Rai Portfolio
 
-A full-stack photographer portfolio built with React, Vite, Node.js, and Express.
+A responsive photographer portfolio website for Kritim Rai, built with React, Vite, Node.js, and Express.
 
-## Scripts
+The site is designed for phone, tablet, and desktop, with a simple multi-page layout and quick contact options for photography inquiries.
 
-- `npm install` in the project root installs the shared dev dependency used to run both apps together.
-- `npm install` in `frontend` installs the React app dependencies.
-- `npm install` in `backend` installs the Express API dependencies.
-- `npm run dev` from the project root starts both the frontend and backend.
-- `npm run build` from the project root builds the frontend for production.
-- `npm run start` from the project root starts the backend API on port `4000`.
+## Features
 
-## Structure
+- Multi-page React app using Browser Router
+- Responsive layout for mobile, tablet, and desktop
+- Mobile bottom navigation for easier phone use
+- Portfolio gallery with image lightbox
+- Services page with package cards, prices, and included features
+- Contact page with package-aware inquiry flow
+- WhatsApp and SMS message generation from the contact form
+- Bikram Sambat style date entry in the booking form
+- Featured section for places where Kritim Rai has been featured
+- Loader screen and automatic scroll-to-top on route change
 
-- `frontend/` contains the Vite + React portfolio site.
-- `backend/` contains the Express API that serves the portfolio content.
+## Pages
+
+- Home
+- Portfolio
+- Services
+- About
+- Contact
+
+## Tech Stack
+
+- Frontend: React, Vite, React Router
+- Styling: Tailwind via `@tailwindcss/vite`
+- Backend: Node.js, Express
+
+## Project Structure
+
+- `frontend/` contains the React portfolio website
+- `backend/` contains the Express API and portfolio data
+
+## Installation
+
+Install dependencies in all required folders:
+
+```bash
+npm install
+cd frontend && npm install
+cd ../backend && npm install
+```
+
+## Run The Project
+
+From the project root:
+
+```bash
+npm run dev
+```
+
+This starts:
+
+- the Vite frontend
+- the Express backend
+
+## Build
+
+To build the frontend:
+
+```bash
+npm run build
+```
+
+## Start Backend Only
+
+```bash
+npm run start
+```
+
+## Notes
+
+- The frontend includes fallback content, so much of the site can still render even if the backend is not running.
+- Contact actions are practical and user-friendly: the form prepares a WhatsApp or SMS message instead of silently sending anything.
+- Collections are currently hidden from the main UI for now, but related code can be brought back later.
